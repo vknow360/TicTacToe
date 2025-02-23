@@ -11,7 +11,10 @@ A simple and interactive Tic-Tac-Toe game built using **React Native**. This pro
 
 ## 📸 Screenshots
 
-(You can add screenshots here)
+![WhatsApp Image 2025-02-24 at 01 31 33_03854d6b](https://github.com/user-attachments/assets/c5c13a88-a966-4781-9515-4de653150780)
+
+![WhatsApp Image 2025-02-24 at 01 31 33_c15f7b4a](https://github.com/user-attachments/assets/d9efb131-0052-42fa-96cc-74261f2adf21)
+
 
 ## 🛠 Tech Stack
 
