@@ -26,9 +26,13 @@ function App() {
   const iconRef = useRef('stopwatch');
   const isBotTurn = useRef(false);
 
-  const handlePlayerTypeChange = () => {
-    if (!gameState.includes('cross') && !gameState.includes('circle')) {
-      const newVsPlayer = !vsPlayer;
+  const handlePlayerTypeChange = (mode: boolean) => {
+    if (
+      !gameState.includes('cross') &&
+      !gameState.includes('circle') &&
+      mode != vsPlayer
+    ) {
+      const newVsPlayer = mode;
       setVsPlayer(newVsPlayer);
       setStatus(`Player${newVsPlayer ? ' 1' : ''} Turn`);
     }
@@ -213,7 +217,9 @@ function App() {
 
         <PlayerChooser
           vsPlayer={vsPlayer}
-          handlePlayerTypeChange={handlePlayerTypeChange}></PlayerChooser>
+          handlePlayerTypeChange={(mode: boolean) =>
+            handlePlayerTypeChange(mode)
+          }></PlayerChooser>
 
         {/* <View style={styles.playerStatus}>
           <View style={styles.playerStatusLeft}>

@@ -6,7 +6,7 @@ import {styles} from '../styles/style';
 
 interface PlayerChooserProps {
   vsPlayer: boolean;
-  handlePlayerTypeChange: () => void;
+  handlePlayerTypeChange: (mode: boolean) => void;
 }
 
 const PlayerChooser: React.FC<PlayerChooserProps> = ({
@@ -17,7 +17,7 @@ const PlayerChooser: React.FC<PlayerChooserProps> = ({
     <View style={styles.playerChooser}>
       <Pressable
         style={[styles.button, vsPlayer ? styles.buttonActive : {}]}
-        onPress={handlePlayerTypeChange}>
+        onPress={() => handlePlayerTypeChange(true)}>
         <View
           style={{
             flexDirection: 'row',
@@ -36,7 +36,7 @@ const PlayerChooser: React.FC<PlayerChooserProps> = ({
       </Pressable>
       <Pressable
         style={[styles.button, !vsPlayer ? styles.buttonActive : {}]}
-        onPress={handlePlayerTypeChange}>
+        onPress={() => handlePlayerTypeChange(false)}>
         <View
           style={{
             flexDirection: 'row',
